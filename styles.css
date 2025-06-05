@@ -847,3 +847,14 @@ h3 {
         width: 70%;
     }
 }
+
+
+/* Video Styling. */
+.pinned-container{
+    padding-bottom: 200vh;
+    display: flex;
+    align-items: center;
+    .media-container {
+        margin: 0 auto;
+    }
+}

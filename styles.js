@@ -18,9 +18,21 @@ const smoother = ScrollSmoother.create({
   ignoreMobileResize: true, // ignores resize on mobile devices
 });
 
+// Target the video
+const video = document.querySelector(".scrubber-video");
+
+// ScrollTrigger for scrubbing video
 ScrollTrigger.create({
-  pin: '.media-container',
-  start: 'top top', // pining the media container's top to the top of the viewport.
-  end: '+=150vh', // ends pinning after 150 viewport height.
-  markers: true, // to see the start and end points.
-})
+  trigger: ".scrubber-container",
+  start: "top top",
+  end: "bottom bottom", // Adjust based on how long you want the scroll to last
+  pin: ".scrubber-video-container",
+  scrub: true,
+  markers: true,
+  onUpdate: (self) => {
+    if (video.readyState >= 2) {
+      const duration = video.duration || 1;
+      video.currentTime = self.progress * duration;
+    }
+  }
+});

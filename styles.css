@@ -850,11 +850,15 @@ h3 {
 
 
 /* Video Styling. */
-.pinned-container{
-    padding-bottom: 200vh;
+.scrubber-container{
+    height: 200vh;
     display: flex;
     align-items: center;
-    .media-container {
+    .scrubber-video-container {
         margin: 0 auto;
+        video {
+            height: 100vh;
+            aspect-ratio: 3 / 2;
+        }
     }
 }

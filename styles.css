@@ -851,14 +851,11 @@ h3 {
 
 /* Video Styling. */
 .scrubber-container{
-    height: 200vh;
+    padding-block: 10vh;;
     display: flex;
     align-items: center;
     .scrubber-video-container {
         margin: 0 auto;
-        video {
-            height: 100vh;
-            aspect-ratio: 3 / 2;
-        }
+        height: 500vh;
     }
 }

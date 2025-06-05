@@ -28,7 +28,7 @@ ScrollTrigger.create({
   end: "bottom bottom", // Adjust based on how long you want the scroll to last
   pin: ".scrubber-video-container",
   scrub: true,
-  markers: true,
+  markers: false, // For Adjustment, change to true
   onUpdate: (self) => {
     if (video.readyState >= 2) {
       const duration = video.duration || 1;

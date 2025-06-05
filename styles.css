@@ -3,17 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-@media screen and (min-width: 1024px) {
-    html, body {
-        height: 100%;
-        overflow: hidden;
-    }
-    [data-scroll-container] {
-        overflow: hidden;
-    }
+html, body {
+    height: 100%;
+    overflow: hidden;
 }
-
+[data-scroll-container] {
+    overflow: hidden;
+}
 @font-face {
     font-family: 'avenir-heavy';
     src: url('fonts/avenir-heavy.woff') format('woff');

@@ -289,7 +289,7 @@ h3 {
 .button-corners::before {
     content: '';
     height: 75px;
-    background-image: url(/images/btn-left-shape.png);
+    /* background-image: url(/images/btn-left-shape.png); */
     background-repeat: no-repeat;
     position: absolute;
     left: -8px;
@@ -302,7 +302,7 @@ h3 {
 .button-corners::after {
     content: '';
     height: 75px;
-    background-image: url(/images/btn-right-shape.png);
+    /* background-image: url(/images/btn-right-shape.png); */
     background-repeat: no-repeat;
     position: absolute;
     right: -13px;

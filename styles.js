@@ -2,12 +2,14 @@ console.log("Styles.js loaded");
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+
 // Disable the trail warning
-gsap.config({
-  trialWarn: false,
-  limitCallbacks: true,
-  ignoreMobileResize: true,
-});
+// gsap.config({
+// trialWarn: false,
+// limitCallbacks: true,
+// ignoreMobileResize: true,
+// });
+
 
 const smoother = ScrollSmoother.create({
   wrapper: "#smooth-wrapper",

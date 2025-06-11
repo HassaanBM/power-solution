@@ -53,3 +53,18 @@ ScrollTrigger.create({
   scrub: true,                             // Tie animation to scroll position
   markers: false                           // Set to true for debugging
 });
+
+
+// Create ScrollTrigger for pinning and syncing aside tag with scroll
+ScrollTrigger.create({
+  id: "stickyAside",                       // Unique ID for reference
+  trigger: ".sticky-aside-container",      // Container that triggers scroll
+  start: "top top",                 // When top of container hits top of viewport
+  end: "bottom bottom",                    // Until the container bottom reaches bottom of viewport
+  pin: ".substation-nav",                  // Pin the video container during scroll
+  pinSpacing: false,                       // Disable spacing to avoid layout shifts
+  toggleClass: "sticky-aside-active",      // Toggle class on pin
+  toggleActions: "play none none reverse", // Play animation on pin, reverse on unpin
+  scrub: true,                             // Tie animation to scroll position
+  markers: true                           // Set to true for debugging
+});

@@ -97,6 +97,30 @@ document.querySelectorAll('a[href]').forEach(a => {
     scrollToHash(getSamePageAnchor(a), e);
   });
 });
-
 // Scroll to the element in the URL's hash on load
 scrollToHash(window.location.hash);
+
+
+
+
+
+
+
+// Automatically highlight nav link based on which section is in view
+document.querySelectorAll('[id^="scrollHook"]').forEach((section) => {
+  const id = section.getAttribute("id");
+  const navLink = document.querySelector(`a[href="#${id}"]`);
+
+  if (navLink) {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",   // Adjust as needed
+      end: "bottom center",  // Adjust as needed
+      toggleClass: {
+        targets: navLink.parentElement, // Assuming <li><a href="#scrollHookX"></a></li>
+        className: "inViewActive"
+      },
+      // Optional: markers: true for debugging
+    });
+  }
+});

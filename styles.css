@@ -233,16 +233,23 @@ h3 {
         font-size: 20px;
         li {
             border-left: 1px solid rgba(63, 63, 63, .4);
-            padding: 0px 34px 20px;
             margin: 0;
             a {
                 text-decoration: none;
                 color: #312f30;
                 line-height: 1.6em;
+                padding: 0px 34px 20px;
+                display: inline-block;
+            }
+            &.inViewActive a{
+                border-left: 6px solid #15809C;
+                font-weight: 700;
+                color: #15809C !important;
             }
         }
     }
 }
+
 
 
 
